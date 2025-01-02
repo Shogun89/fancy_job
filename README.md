@@ -2,6 +2,16 @@
 
 A simple Python script that automatically increments a number in a text file and commits the change to git. Perfect for maintaining a daily commit streak or tracking sequential values.
 
+---
+
+## Why Use This Script?
+
+1. **Daily GitHub Streaks**: Keep your GitHub profile active with consistent daily commits.
+2. **Job Readiness**: Enhance your profile with a visually appealing streak that can impress recruiters.
+3. **Customization**: Use this as a foundation to build more automated scripts for your projects.
+
+---
+
 ## Setup
 
 1. Clone this repository:
