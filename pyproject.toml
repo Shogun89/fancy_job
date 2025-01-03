@@ -1,0 +1,12 @@
+[project]
+name = "fancy-job"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = []
+[project.optional-dependencies]
+llm = [
+    "torch>=2.5.1",
+    "transformers>=4.47.1"
+]

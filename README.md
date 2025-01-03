@@ -11,10 +11,23 @@ git clone https://github.com/Shogun89/fancy_job
 cd fancy_job
 ```
 
-2. Run the script:
+2.  Run the script
+
+The script can be run without dependencies besides the Python standard library,
+simply by running
 
 ```bash
 python update_number.py
+```
+
+However, if you wish to use LLM-based commit message generation, you need to
+install [uv](https://docs.astral.sh/uv) to manage dependencies.
+The first time you run it, it will download packages required for its execution
+and also a large language model from Hugging Face
+
+```bash
+# Use LLM
+FANCY_JOB_USE_LLM=true uv run python update_number.py
 ```
 
 3. Setup a cron job to run the script daily:
@@ -27,6 +40,8 @@ Add the following line to the crontab file:
 
 ```bash
 0 6 * * * cd /path/to/your/repo && python update_number.py
+# or with LLM
+0 6 * * * cd /path/to/your/repo && FANCY_JOB_USE_LLM=true uv run python update_number.py
 ```
 
 This will run the script at 6am every day.
