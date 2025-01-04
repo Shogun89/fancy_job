@@ -1,6 +1,6 @@
 # Daily Number Incrementer
 
-A simple Python script that automatically increments a number in a text file and commits the change to git. Perfect for maintaining a daily commit streak or tracking sequential values.
+A Python script that automatically increments a number in a text file, commits the change to Git, and updates a cron job to run the script at a new random time daily. Perfect for maintaining a daily commit streak or tracking sequential values with a dynamic schedule.
 
 ## Setup
 
@@ -11,13 +11,13 @@ git clone https://github.com/Shogun89/fancy_job
 cd fancy_job
 ```
 
-2. Run the script:
+2. Run the script manually for the first time to verify it works and to set the cron job:
 
 ```bash
 python update_number.py
 ```
 
-3. Setup a cron job to run the script daily:
+3. Optional: If you prefer to ensure the script runs at a fixed time initially, you can manually set up a cron job:
 
 ```bash
 crontab -e
@@ -29,7 +29,7 @@ Add the following line to the crontab file:
 0 6 * * * cd /path/to/your/repo && python update_number.py
 ```
 
-This will run the script at 6am every day.
+This will initially run the script at 6am the next day.
 
 ## Usage
 
